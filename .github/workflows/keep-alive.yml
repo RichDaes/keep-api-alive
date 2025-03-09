@@ -1,0 +1,13 @@
+name: Keep API Alive
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # 每 10 分钟运行一次
+  workflow_dispatch:  # 允许手动运行
+
+jobs:
+  keep_alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send request to API
+        run: curl -s -o /dev/null -w "%{http_code}" https://https://belauyi.onrender.com/ping
