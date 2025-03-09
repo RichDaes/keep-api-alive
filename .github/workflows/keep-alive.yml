@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send request to API
-        run: curl -s -o /dev/null -w "%{http_code}" https://https://belauyi.onrender.com/ping
+        run: curl -s -o /dev/null -w "%{http_code}" https://https://belauyi.onrender.com
